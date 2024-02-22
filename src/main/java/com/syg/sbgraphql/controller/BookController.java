@@ -4,6 +4,7 @@ import com.syg.sbgraphql.entity.Book;
 import com.syg.sbgraphql.service.BookService;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
@@ -20,6 +21,8 @@ public class BookController {
 
     private BookService bookService;
 
+    @Value("${hi}")
+    private String val;
     public BookController(BookService bookService){
         this.bookService = bookService;
     }
@@ -27,6 +30,7 @@ public class BookController {
     //@GetMapping("all")
     @QueryMapping("allBooks")
     public List<Book> getAllBooks(){
+        System.out.println(val);
         return this.bookService.getAllBooks();
     }
 

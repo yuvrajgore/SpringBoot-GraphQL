@@ -3,6 +3,7 @@ package com.syg.sbgraphql.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,6 +12,7 @@ import javax.persistence.Id;
 
 @Entity
 @Data
+@Validated
 @AllArgsConstructor
 @NoArgsConstructor
 public class Book {

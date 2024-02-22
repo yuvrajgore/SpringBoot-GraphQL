@@ -3,6 +3,7 @@ package com.syg.sbgraphql;
 import com.syg.sbgraphql.entity.Book;
 import com.syg.sbgraphql.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,6 +13,7 @@ public class SbGraphqlApplication implements CommandLineRunner {
 
 	@Autowired
 	private BookService bookService;
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(SbGraphqlApplication.class, args);
